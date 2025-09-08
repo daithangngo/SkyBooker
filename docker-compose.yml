@@ -6,7 +6,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 12345678
-      MYSQL_DATABASE: fightdb
+      MYSQL_DATABASE: flightdb
     ports:
       - "3306:3306"
     volumes:
