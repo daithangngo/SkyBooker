@@ -1,9 +1,10 @@
-package com.skybooker.SkyBooker.entities;
+package com.skybooker.SkyBooker.dtos;
 
+import com.skybooker.SkyBooker.entities.Airport;
+import com.skybooker.SkyBooker.entities.Booking;
+import com.skybooker.SkyBooker.entities.User;
 import com.skybooker.SkyBooker.enums.FlightStatus;
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,39 +14,33 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Data
-@Table(name="flights")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Flight {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name="id")
+public class FlightDTO {
+
     private Long id;
 
-    @Column(unique = true,  nullable = false)
     private String flightNumber;
 
-    @Enumerated(EnumType.STRING)
     private FlightStatus status;
 
-    @ManyToOne
-    @JoinColumn(name = "departure_airport_id")
     private Airport departureAirport;
 
-    @ManyToOne
-    @JoinColumn(name = "arrival_airport_id")
     private Airport arrivalAirport;
 
     private LocalDateTime departureTime;
+
     private LocalDateTime arrivalTime;
 
     private BigDecimal basePrice;
 
-    @ManyToOne
-    private User assignedPilot;
+    private UserDTO assignedPilot;
 
-    @OneToMany(mappedBy = "flight")
-    private List<Booking> bookings = new ArrayList<>();
+    private List<BookingDTO> bookings;
+
+    private String departureAirportIataCode;
+
+    private String arrivalAirportIataCode;
+
 }

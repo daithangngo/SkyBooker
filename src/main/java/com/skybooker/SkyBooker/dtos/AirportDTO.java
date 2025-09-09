@@ -1,34 +1,29 @@
-package com.skybooker.SkyBooker.entities;
+package com.skybooker.SkyBooker.dtos;
 
 import com.skybooker.SkyBooker.enums.City;
 import com.skybooker.SkyBooker.enums.Country;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
 @Data
-@Table(name="airports")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Airport {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class AirportDTO {
     private Long id;
 
-    @Column(nullable = false)
+    @NotBlank(message = "name is required")
     private String name;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
+    @NotNull(message = "city is required")
     private City city;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
+    @NotNull(message = "country is required")
     private Country country;
 
-    @Column(unique = true, nullable = false, length = 3)
+    @NotBlank(message = "iataCode is required")
     private String iataCode;
 }
