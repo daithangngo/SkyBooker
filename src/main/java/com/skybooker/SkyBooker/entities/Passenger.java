@@ -2,20 +2,18 @@ package com.skybooker.SkyBooker.entities;
 
 import com.skybooker.SkyBooker.enums.PassengerType;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@Table(name="passengers")
+@Table(name = "passengers")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Passenger {
-
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne

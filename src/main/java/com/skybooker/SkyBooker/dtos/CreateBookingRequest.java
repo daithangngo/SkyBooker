@@ -14,7 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateBookingRequest {
-
     @NotNull(message = "Flight Id cannot be null")
     private Long flightId;
 

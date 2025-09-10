@@ -1,9 +1,6 @@
 package com.skybooker.SkyBooker.dtos;
 
-import com.skybooker.SkyBooker.entities.Airport;
 import com.skybooker.SkyBooker.enums.FlightStatus;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -20,7 +17,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateFlightRequest {
-
     private Long id;
 
     private FlightStatus status;

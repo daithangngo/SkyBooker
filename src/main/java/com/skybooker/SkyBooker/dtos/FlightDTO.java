@@ -14,7 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FlightDTO {
-
     private Long id;
 
     private String flightNumber;

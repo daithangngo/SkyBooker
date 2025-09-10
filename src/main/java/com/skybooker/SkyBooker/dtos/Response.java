@@ -1,7 +1,8 @@
 package com.skybooker.SkyBooker.dtos;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
 
 @Data
 @Builder
