@@ -1,17 +1,13 @@
 package com.skybooker.SkyBooker.dtos;
 
 import com.skybooker.SkyBooker.entities.Airport;
-import com.skybooker.SkyBooker.entities.Booking;
-import com.skybooker.SkyBooker.entities.User;
 import com.skybooker.SkyBooker.enums.FlightStatus;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data

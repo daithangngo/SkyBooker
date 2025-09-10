@@ -1,10 +1,8 @@
 package com.skybooker.SkyBooker.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.skybooker.SkyBooker.entities.Booking;
 import com.skybooker.SkyBooker.entities.Role;
 import com.skybooker.SkyBooker.enums.AuthMethod;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
